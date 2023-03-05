@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
   },
   image: {
     // backgroundImage: "url(https://source.unsplash.com/random)",
-    backgroundImage: "url(mujer.jpg)",
+    backgroundImage: "url(vertical2.jpg)",
     backgroundRepeat: "no-repeat",
     backgroundColor:
       theme.palette.type === "light"
@@ -80,9 +80,9 @@ export default function Login() {
           </Avatar>
 
           <Typography component="h1" variant="h5">
-          Hello! 
-          Want Premium Shoes? 
-          Create Account
+          
+          <p > Hello Again! 
+            Welcome Back You’ve Been Missed</p>
           </Typography>
 
           <form className={classes.form} noValidate>
@@ -122,7 +122,7 @@ export default function Login() {
               color="primary"
               className={classes.submit}
             >
-              Register
+              SIGN IN
             </Button>
             <Grid container>
               <Grid item xs>
@@ -132,7 +132,7 @@ export default function Login() {
               </Grid>
               <Grid item>
                 <Link href="#" variant="body2">
-                  {"Don't have an account? Sign Up"}
+                  {"No account? Create one"}
                 </Link>
               </Grid>
             </Grid>

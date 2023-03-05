@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
   },
   image: {
     // backgroundImage: "url(https://source.unsplash.com/random)",
-    backgroundImage: "url(vertical2.jpg)",
+    backgroundImage: "url(mujer.jpg)",
     backgroundRepeat: "no-repeat",
     backgroundColor:
       theme.palette.type === "light"
@@ -150,12 +150,12 @@ export default function Signup() {
             <Grid container>
               <Grid item xs>
                 <Link href="#" variant="body2">
-                  Forgot password?
+                  {/* Forgot password? */}
                 </Link>
               </Grid>
               <Grid item>
                 <Link href="#" variant="body2">
-                  {"Don't have an account? Sign Up"}
+                  {/* {"Don't have an account? Sign Up"} */}
                 </Link>
               </Grid>
             </Grid>
