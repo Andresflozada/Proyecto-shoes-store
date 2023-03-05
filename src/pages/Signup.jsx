@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
   },
   image: {
     // backgroundImage: "url(https://source.unsplash.com/random)",
-    backgroundImage: "url(mujer.jpg)",
+    backgroundImage: "url(vertical2.jpg)",
     backgroundRepeat: "no-repeat",
     backgroundColor:
       theme.palette.type === "light"
@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SignInSide() {
+export default function Signup() {
   const classes = useStyles();
 
   return (
@@ -87,16 +87,18 @@ export default function SignInSide() {
 
           <form className={classes.form} noValidate>
             
-          <TextField
+         
+            <TextField
               variant="outlined"
               margin="normal"
               required
               fullWidth
-              name="Enter your name"
-              label="Enter your name"
-              type="text"
               id="Enter your name"
+              label="Enter your name"
+              name="Enter your name"
+              type="text"
               autoComplete="Enter your name"
+              autoFocus
             />
             <TextField
               variant="outlined"
@@ -125,12 +127,13 @@ export default function SignInSide() {
               margin="normal"
               required
               fullWidth
-              name="number"
-              label="number"
-              type="string"
-              id="number"
-              autoComplete="number"
+              name="Number"
+              label="Number"
+              type="String"
+              id="Number"
+              autoComplete="current-number"
             />
+           
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
@@ -147,12 +150,12 @@ export default function SignInSide() {
             <Grid container>
               <Grid item xs>
                 <Link href="#" variant="body2">
-                  {/* Forgot password? */}
+                  Forgot password?
                 </Link>
               </Grid>
               <Grid item>
                 <Link href="#" variant="body2">
-                  {/* {"Don't have an account? Sign Up"} */}
+                  {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>
             </Grid>
