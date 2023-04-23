@@ -1,5 +1,4 @@
 import React from "react";
-import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
@@ -9,7 +8,6 @@ import Link from "@material-ui/core/Link";
 import Paper from "@material-ui/core/Paper";
 import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
-import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -29,15 +27,14 @@ function Copyright() {
 const useStyles = makeStyles((theme) => ({
   root: {
     height: "100vh",
-    
   },
-  container:{
-    width:"150px",
-    height:"150px",
+  container: {
+    width: "150px",
+    height: "150px",
   },
   image: {
     // backgroundImage: "url(https://source.unsplash.com/random)",
-    backgroundImage: "url(mujer.jpg)",
+    backgroundImage: "mujer.jpg",
     backgroundRepeat: "no-repeat",
     backgroundColor:
       theme.palette.type === "light"
@@ -63,6 +60,15 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
+  mainText: {
+    fontFamily: "Inter",
+    fontStyle: "normal",
+    fontWeight: 600,
+    fontSize: "32px",
+    lineHeight: "39px",
+    textAlign: "center",
+    color: "#000000",
+  },
 }));
 
 export default function Signup() {
@@ -75,19 +81,16 @@ export default function Signup() {
       {/* Esto es el contenedor del formulario */}
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
         <div className={classes.paper}>
-          <Avatar className={classes.avatar}>
-            <LockOutlinedIcon />
-          </Avatar>
 
-          <Typography component="h1" variant="h5">
-          Hello! 
-          Want Premium Shoes? 
-          Create Account
-          </Typography>
+          <div>
+            <Typography className={classes.mainText}>
+              <p>Hello!</p>
+              <p>Want Premium Shoes?</p>
+              <p>Create Account</p>
+            </Typography>
+          </div>
 
           <form className={classes.form} noValidate>
-            
-         
             <TextField
               variant="outlined"
               margin="normal"
@@ -129,15 +132,29 @@ export default function Signup() {
               fullWidth
               name="Number"
               label="Number"
-              type="String"
+              type="number"
               id="Number"
               autoComplete="current-number"
             />
-           
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
+
+
+            <Grid container>
+              {/* <Grid item xs>
+                <Link href="#" variant="body2">
+                  { Forgot password? }
+                </Link>
+              </Grid> */}
+              <Grid item>
+                <Link href="/user/login" variant="body1" alignItems="center">
+                  {"Don't have an account? Sign Up"}
+                </Link>
+              </Grid>
+            </Grid>
+
             <Button
               type="submit"
               fullWidth
@@ -147,18 +164,8 @@ export default function Signup() {
             >
               Register
             </Button>
-            <Grid container>
-              <Grid item xs>
-                <Link href="#" variant="body2">
-                  {/* Forgot password? */}
-                </Link>
-              </Grid>
-              <Grid item>
-                <Link href="#" variant="body2">
-                  {/* {"Don't have an account? Sign Up"} */}
-                </Link>
-              </Grid>
-            </Grid>
+
+
             <Box mt={5}>
               <Copyright />
             </Box>
@@ -167,8 +174,8 @@ export default function Signup() {
       </Grid>
 
       {/* Esto es la imagen */}
-      <Grid item xs={false} sm={4} md={7} className={classes.image}/>
-
+      <Grid item xs={false} sm={4} md={7} className={classes.image} />
+      <div className={classes.image}></div>
     </Grid>
   );
 }

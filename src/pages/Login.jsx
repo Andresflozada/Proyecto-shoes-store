@@ -1,5 +1,4 @@
 import React from "react";
-import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
@@ -9,7 +8,6 @@ import Link from "@material-ui/core/Link";
 import Paper from "@material-ui/core/Paper";
 import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
-import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -29,15 +27,14 @@ function Copyright() {
 const useStyles = makeStyles((theme) => ({
   root: {
     height: "100vh",
-    
   },
-  container:{
-    width:"150px",
-    height:"150px",
+  container: {
+    width: "150px",
+    height: "150px",
   },
   image: {
-    // backgroundImage: "url(https://source.unsplash.com/random)",
-    backgroundImage: "url(vertical2.jpg)",
+    backgroundImage: "url(https://source.unsplash.com/random)",
+    // backgroundImage: "url(vertical2.jpg)",
     backgroundRepeat: "no-repeat",
     backgroundColor:
       theme.palette.type === "light"
@@ -52,16 +49,21 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
   },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
-  },
   form: {
     width: "100%", // Fix IE 11 issue.
     marginTop: theme.spacing(1),
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
+  },
+  mainText: {
+    fontFamily: "Inter",
+    fontStyle: "normal",
+    fontWeight: 600,
+    fontSize: "32px",
+    lineHeight: "39px",
+    textAlign: "center",
+    color: "#000000",
   },
 }));
 
@@ -75,19 +77,12 @@ export default function Login() {
       {/* Esto es el contenedor del formulario */}
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
         <div className={classes.paper}>
-          <Avatar className={classes.avatar}>
-            <LockOutlinedIcon />
-          </Avatar>
-
-          <Typography component="h1" variant="h5">
-          
-          <p > Hello Again! 
-            Welcome Back You’ve Been Missed</p>
+          <Typography className={classes.mainText}>
+            <p> Hello Again! </p>
+            <p> Welcome Back You’ve Been Missed</p>
           </Typography>
 
           <form className={classes.form} noValidate>
-            
-         
             <TextField
               variant="outlined"
               margin="normal"
@@ -110,7 +105,7 @@ export default function Login() {
               id="password"
               autoComplete="current-password"
             />
-           
+
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
@@ -120,6 +115,7 @@ export default function Login() {
               fullWidth
               variant="contained"
               color="primary"
+              href="/"
               className={classes.submit}
             >
               SIGN IN
@@ -131,7 +127,7 @@ export default function Login() {
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="#" variant="body2">
+                <Link href="/user/signup" variant="body2">
                   {"No account? Create one"}
                 </Link>
               </Grid>
@@ -144,8 +140,7 @@ export default function Login() {
       </Grid>
 
       {/* Esto es la imagen */}
-      <Grid item xs={false} sm={4} md={7} className={classes.image}/>
-
+      <Grid item xs={false} sm={4} md={7} className={classes.image} />
     </Grid>
   );
 }

@@ -1,20 +1,22 @@
-import React, { useState } from 'react';
-import FakeChat from './FakeChat';
-import './index.css';
+import React, { useState } from "react";
+// import FakeChat from './FakeChat';
+// import './index.css';
+
+import InsetDividers from "../Components/Chat/InboxList";
 
 function FakeChat() {
   const [messages, setMessages] = useState([]);
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
     if (!inputValue) return;
-    setMessages([...messages, { text: inputValue, sender: 'user' }]);
-    setInputValue('');
+    setMessages([...messages, { text: inputValue, sender: "user" }]);
+    setInputValue("");
     setTimeout(() => {
       setMessages([
         ...messages,
-        { text: 'Lo siento, no puedo responder eso.', sender: 'bot' },
+        { text: "Lo siento, no puedo responder eso.", sender: "bot" },
       ]);
     }, 1000);
   };
@@ -25,11 +27,12 @@ function FakeChat() {
 
   return (
     <div className="chat-container">
+      <InsetDividers />
       <div className="messages">
         {messages.map((message, index) => (
           <div
             key={index}
-            className={`message ${message.sender === 'user' ? 'user' : 'bot'}`}
+            className={`message ${message.sender === "user" ? "user" : "bot"}`}
           >
             {message.text}
           </div>

@@ -1,38 +1,21 @@
-// react 18.2.0
+// // react 18.2.0
 
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import './index.css';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import Store from './pages/Store';
+// import {
+//   createBrowserRouter,
+//   RouterProvider,
+// } from "react-router-dom";
 
-const router = createBrowserRouter([
-  {
-    path: "/Login",
-    element: <Login />,
-  },
-  {
-    path: "/Signup",
-    element: <Signup />,
-  },
-  {
-    path: "/",
-    element: <Login />,
-  },
-  {
-    path: "/Store",
-    element: <Store />,
-  }
-]);
+import "./index.css";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import { StyledEngineProvider } from "@mui/material/styles";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-   <RouterProvider router={router} />
+    <StyledEngineProvider injectFirst>
+      <App />
+    </StyledEngineProvider>
   </React.StrictMode>
 );
