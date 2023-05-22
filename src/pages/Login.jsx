@@ -10,6 +10,7 @@ import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
+import imagen from "../assets/vertical3.jpg";
 
 function Copyright() {
   return (
@@ -33,8 +34,8 @@ const useStyles = makeStyles((theme) => ({
     height: "150px",
   },
   image: {
-    backgroundImage: "url(https://source.unsplash.com/random)",
-    // backgroundImage: "url(vertical2.jpg)",
+    // backgroundImage: "url(https://source.unsplash.com/random)",
+    backgroundImage: `url(${imagen})`,
     backgroundRepeat: "no-repeat",
     backgroundColor:
       theme.palette.type === "light"
@@ -115,7 +116,7 @@ export default function Login() {
               fullWidth
               variant="contained"
               color="primary"
-              href="/"
+              href="/home"
               className={classes.submit}
             >
               SIGN IN
@@ -127,7 +128,7 @@ export default function Login() {
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="/user/signup" variant="body2">
+                <Link href="/user/register" variant="body2">
                   {"No account? Create one"}
                 </Link>
               </Grid>

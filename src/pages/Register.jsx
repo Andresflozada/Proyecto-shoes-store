@@ -10,6 +10,7 @@ import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
+import imagen from "../assets/mujer.jpg";
 
 function Copyright() {
   return (
@@ -33,8 +34,7 @@ const useStyles = makeStyles((theme) => ({
     height: "150px",
   },
   image: {
-    // backgroundImage: "url(https://source.unsplash.com/random)",
-    backgroundImage: "mujer.jpg",
+    backgroundImage: `url(${imagen})`,
     backgroundRepeat: "no-repeat",
     backgroundColor:
       theme.palette.type === "light"

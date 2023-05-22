@@ -8,6 +8,7 @@ const AppRoutes = () => {
   return (
     <Routes>
       <Route exact path="/" element={<Login/>} />
+      <Route exact path="/home" element={<Store/>} />
       <Route path="/contact" element={<FakeChat/>} />
     </Routes>
   );
