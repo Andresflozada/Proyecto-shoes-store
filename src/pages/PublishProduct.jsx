@@ -4,6 +4,7 @@ import { Box, AppBar, Toolbar } from "@material-ui/core";
 
 import Header from "../Components/Header";
 import PublishForm from "../Components/PublishForm";
+import BrandSelector from "../components/SelectorBrand";
 import CategorySelector from "../Components/CategorySelector";
 
 const useStyles = makeStyles((theme) => ({
@@ -45,6 +46,7 @@ function App() {
       <Box className={classes.mainContainer}>
         <Box className={classes.sidebar}>
           <CategorySelector />
+          <BrandSelector/>
         </Box>
         <Box className={classes.mainContent}>
           <PublishForm />
