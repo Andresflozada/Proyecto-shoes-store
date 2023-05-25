@@ -4,7 +4,7 @@ import { Box, AppBar, Toolbar } from "@material-ui/core";
 
 import Header from "../Components/Header";
 import PublishForm from "../Components/PublishForm";
-import BrandSelector from "../components/SelectorBrand";
+import BrandSelector from "../Components/SelectorBrand";
 import CategorySelector from "../Components/CategorySelector";
 
 const useStyles = makeStyles((theme) => ({
